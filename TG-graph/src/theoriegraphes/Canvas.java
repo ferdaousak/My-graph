@@ -23,10 +23,7 @@ import metier.Configuration;
 import metier.Graphe;
 import metier.Sommet;
 
-/**
- *
- * @author Aymane hehe
- */
+
 public class Canvas extends javax.swing.JPanel
 {
     public static Canvas instance;

@@ -11,11 +11,7 @@ import java.awt.Rectangle;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- *
- * @author Aymane hehe
- * 
- */
+
 public class Sommet implements Comparable<Sommet>
 {
     private String label;

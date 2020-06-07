@@ -7,10 +7,6 @@ package metier;
 import java.util.HashMap;
 import javax.swing.table.AbstractTableModel;
 
-/**
- *
- * @author Aymane hehe
- */
 
 public class DijikstraModel extends AbstractTableModel
 {

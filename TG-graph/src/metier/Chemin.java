@@ -9,10 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
-/**
- *
- * @author Aymane hehe
- */
+
 public class Chemin implements Comparable<Chemin>
 {
     ArrayList<Sommet> sommets;

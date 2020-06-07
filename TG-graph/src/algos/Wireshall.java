@@ -14,10 +14,7 @@ import metier.Graphe;
 import metier.Sommet;
 import theoriegraphes.Canvas;
 
-/**
- *
- * @author Aymane hehe
- */
+
 public class Wireshall extends Algorithme
 {
     public Wireshall(Graphe g)

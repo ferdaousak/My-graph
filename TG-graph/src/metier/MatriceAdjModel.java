@@ -8,10 +8,7 @@ package metier;
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
-/**
- *
- * @author Aymane hehe
- */
+
 public class MatriceAdjModel extends AbstractTableModel
 {
     

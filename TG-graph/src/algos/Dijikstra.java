@@ -19,9 +19,7 @@ import metier.Sommet;
 import theoriegraphes.Canvas;
 import theoriegraphes.MainFrame;
 
-/**
- * @author Aymane hehe
- */
+
 public class Dijikstra extends Algorithme
 {
     private final ArrayList<Sommet> sommets;

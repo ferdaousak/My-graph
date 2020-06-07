@@ -10,10 +10,8 @@ import java.util.Map;
 import metier.DijikstraModel;
 import metier.Sommet;
 
-/**
- *
- * @author abdel
- */
+
+
 public class ResultatCourtChemin extends javax.swing.JDialog {
     private Sommet depart;
     private HashMap<String,Double> l;

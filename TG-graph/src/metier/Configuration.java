@@ -13,10 +13,6 @@ import theoriegraphes.Canvas;
 import theoriegraphes.MainFrame;
 
 
-/**
- *
- * @author Aymane hehe
- */
 public class Configuration
 {
     public static boolean pondere = true;

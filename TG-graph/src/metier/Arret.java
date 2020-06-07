@@ -11,10 +11,7 @@ import java.awt.Graphics2D;
 import java.awt.Stroke;
 import java.awt.geom.Line2D;
 
-/**
- *
- * @author abdel
- */
+
 public class Arret implements Comparable<Arret>
 {
     private Sommet sommetA;

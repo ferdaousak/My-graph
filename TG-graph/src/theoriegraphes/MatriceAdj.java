@@ -14,10 +14,7 @@ import metier.Configuration;
 import metier.MatriceAdjModel;
 import metier.Sommet;
 
-/**
- *
- * @author abdel
- */
+
 public class MatriceAdj extends javax.swing.JDialog {
     private int[][] matrice;
     private ArrayList<Sommet> sommets = new ArrayList<>();

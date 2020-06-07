@@ -8,10 +8,6 @@ package algos;
 import metier.Configuration;
 import metier.Graphe;
 
-/**
- *
- * @author ferdaous aaaa
- */
 
 //Algorithme class is an abscart class that's runnable
 public abstract class Algorithme implements Runnable

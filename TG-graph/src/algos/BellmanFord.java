@@ -17,10 +17,7 @@ import metier.Sommet;
 import theoriegraphes.Canvas;
 import theoriegraphes.MainFrame;
 
-/**
- *
- * @author abdel
- */
+
 public class BellmanFord extends Algorithme{
     private final ArrayList<Sommet> sommets;
     private final ArrayList<Arret> arrets;

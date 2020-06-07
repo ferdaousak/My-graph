@@ -17,10 +17,7 @@ import metier.Graphe;
 import metier.Sommet;
 import theoriegraphes.Canvas;
 
-/**
- *
- * @author Aymane hehe
- */
+
 public class FordFolkersonResiduelle extends Algorithme
 {
     private Graphe new_g;

@@ -13,11 +13,13 @@ import javax.swing.JLabel;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.Font;
 
-/**
- *
- * @author abdel
- */
+
 public class MenuInitial extends javax.swing.JPanel {
+	
+	private javax.swing.JButton jButton1;
+    private javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton jToggleButton2;
 
     /**
      * Creates new form MenuInitial
@@ -121,8 +123,5 @@ public class MenuInitial extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
+    
 }

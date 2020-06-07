@@ -32,6 +32,8 @@ import com.sun.media.jfxmediaimpl.platform.Platform;
 import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.Desktop;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -42,10 +44,14 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import javax.swing.Box;
 import javax.swing.JColorChooser;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -53,10 +59,6 @@ import metier.Arret;
 import metier.Configuration;
 import metier.Sommet;
 
-/**
- *
- * @author abdel
- */
 public class MainFrame extends javax.swing.JFrame {
     private static MainFrame instance;
     public static MainFrame getInstance(){
@@ -67,7 +69,27 @@ public class MainFrame extends javax.swing.JFrame {
     }
     
     private MainFrame() {
+    	setIconImage(Toolkit.getDefaultToolkit().getImage(MainFrame.class.getResource("/Icon/g5.png")));
+    	setTitle("MyGraph");
         initComponents();
+        
+//        JMenuBar mb = new JMenuBar();
+//        JMenu fileMenu = new JMenu("Fichier");
+//    	
+//    	
+//    	mb.add(Box.createRigidArea(new Dimension(100,67)));
+//    	mb.setBackground(new Color(246, 114, 128));
+//    	mb.setOpaque(true);
+//    	for(int i=0;i<100;i++) 
+//    	{
+//    		fileMenu.setBackground(new Color(246, 114, 128));
+//        	fileMenu.setOpaque(true);
+//    	}
+//    	
+// 
+//    	mb.add(fileMenu);
+//        
+//        this.setJMenuBar(mb);
     }
     
     public void setCentrePanel(JPanel p){

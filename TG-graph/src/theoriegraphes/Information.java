@@ -8,10 +8,7 @@ package theoriegraphes;
 import metier.Graphe;
 import metier.Sommet;
 
-/**
- *
- * @author abdel
- */
+
 public class Information extends javax.swing.JDialog {
     private Sommet s;
     private Graphe g;

@@ -24,10 +24,7 @@ import theoriegraphes.Canvas;
 import theoriegraphes.ResultatCourtChemin;
 import theoriegraphes.MainFrame;
 
-/**
- *
- * @author Aymane hehe
- */
+
 public class Graphe implements Cloneable
 {
     private Graphe preInstance;

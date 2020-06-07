@@ -15,10 +15,7 @@ import metier.Graphe;
 import metier.Sommet;
 import theoriegraphes.Canvas;
 
-/**
- *
- * @author abdel
- */
+
 public class Kruscal extends Algorithme
 {
     private Graphe new_g;
