@@ -63,6 +63,8 @@ import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SwingConstants;
 import java.awt.Component;
+import javax.swing.JLabel;
+import java.awt.Font;
 
 public class MainFrame extends javax.swing.JFrame {
     private static MainFrame instance;
@@ -114,7 +116,7 @@ public class MainFrame extends javax.swing.JFrame {
         jSplitPane1 = new javax.swing.JSplitPane();
         jSplitPane1.setBackground(new Color(153, 255, 153));
         jSplitPane2 = new javax.swing.JSplitPane();
-        jSplitPane2.setResizeWeight(0.5);
+        jSplitPane2.setResizeWeight(1.0);
         jSplitPane2.setBackground(new Color(153, 255, 153));
         jPanel1 = new javax.swing.JPanel();
         btn_bfs = new javax.swing.JButton();
@@ -222,7 +224,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        btn_dijikstra.setText("Dijekstra");
+        btn_dijikstra.setText("Dijkstra");
         btn_dijikstra.setEnabled(false);
         btn_dijikstra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,7 +232,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        btn_billmanford.setText("Billman Ford");
+        btn_billmanford.setText("Bellman-Ford");
         btn_billmanford.setEnabled(false);
         btn_billmanford.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -254,7 +256,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         
-        btn_WelchPowell.setText("WelchPowell (Coloriage)");
+        btn_WelchPowell.setText("WelchPowell ");
         btn_WelchPowell.setEnabled(false);
         btn_WelchPowell.addActionListener(new java.awt.event.ActionListener()
         {
@@ -290,74 +292,171 @@ public class MainFrame extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
+        
+        JLabel lblNewLabel = new JLabel("Algorithmes");
+        lblNewLabel.setFont(new Font("Constantia", Font.BOLD, 20));
+        
+        JLabel lblNewLabel_1 = new JLabel("------Parcours graphe------");
+        lblNewLabel_1.setFont(new Font("Constantia", Font.ITALIC, 15));
+        
+        JLabel lblNewLabel_2 = new JLabel("----Arbre couvrant minimal----");
+        lblNewLabel_2.setFont(new Font("Constantia", Font.ITALIC, 15));
+        
+        JLabel lblNewLabel_3 = new JLabel("------Court chemin------");
+        lblNewLabel_3.setFont(new Font("Constantia", Font.ITALIC, 15));
+        
+        JLabel lblNewLabel_4 = new JLabel("----R\u00E9seau de transport----");
+        lblNewLabel_4.setFont(new Font("Constantia", Font.ITALIC, 15));
+        
+        JLabel lblNewLabel_5 = new JLabel("--------Coloriage--------");
+        lblNewLabel_5.setFont(new Font("Constantia", Font.ITALIC, 15));
+        
+        lblNewLabel_6 = new JLabel("----Changer les couleurs----");
+        lblNewLabel_6.setFont(new Font("Constantia", Font.ITALIC, 15));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1Layout.setHorizontalGroup(
         	jPanel1Layout.createParallelGroup(Alignment.LEADING)
         		.addGroup(jPanel1Layout.createSequentialGroup()
+        			.addContainerGap(71, Short.MAX_VALUE)
+        			.addComponent(lblNewLabel)
+        			.addGap(63))
+        		.addGroup(jPanel1Layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(btn_WelchPowell, GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+        			.addContainerGap())
+        		.addGroup(jPanel1Layout.createSequentialGroup()
+        			.addGap(35)
+        			.addComponent(lblNewLabel_6, GroupLayout.PREFERRED_SIZE, 174, GroupLayout.PREFERRED_SIZE)
+        			.addContainerGap(44, Short.MAX_VALUE))
+        		.addGroup(jPanel1Layout.createSequentialGroup()
+        			.addGap(42)
+        			.addComponent(lblNewLabel_1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        			.addGap(44))
+        		.addGroup(jPanel1Layout.createSequentialGroup()
         			.addContainerGap()
         			.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING)
-        				.addComponent(jButton4, GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-        				.addComponent(btn_bfs, GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-        				.addComponent(btn_dfs, GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-        				.addComponent(btn_prim, GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-        				.addComponent(btn_kruskal, GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
         				.addGroup(jPanel1Layout.createSequentialGroup()
-        					.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+        					.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING)
         						.addGroup(jPanel1Layout.createSequentialGroup()
-        							.addComponent(jButton7)
+        							.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+        								.addGroup(jPanel1Layout.createSequentialGroup()
+        									.addComponent(jButton7)
+        									.addPreferredGap(ComponentPlacement.RELATED)
+        									.addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 21, GroupLayout.PREFERRED_SIZE)
+        									.addPreferredGap(ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+        									.addComponent(jLabel5, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE))
+        								.addGroup(jPanel1Layout.createSequentialGroup()
+        									.addComponent(jButton2)
+        									.addPreferredGap(ComponentPlacement.RELATED)
+        									.addComponent(jLabel7)
+        									.addPreferredGap(ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+        									.addComponent(jLabel6)))
         							.addPreferredGap(ComponentPlacement.RELATED)
-        							.addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 21, GroupLayout.PREFERRED_SIZE)
-        							.addPreferredGap(ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-        							.addComponent(jLabel5, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE))
+        							.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING, false)
+        								.addComponent(jButton9, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        								.addComponent(jButton8, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         						.addGroup(jPanel1Layout.createSequentialGroup()
-        							.addComponent(jButton2)
-        							.addPreferredGap(ComponentPlacement.RELATED)
-        							.addComponent(jLabel7)
-        							.addPreferredGap(ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-        							.addComponent(jLabel6)))
-        					.addPreferredGap(ComponentPlacement.RELATED)
-        					.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING, false)
-        						.addComponent(jButton9, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        						.addComponent(jButton8, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        				.addComponent(btn_wireshall, GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-        				.addComponent(btn_dijikstra, GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-        				.addComponent(btn_billmanford, GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-        				.addComponent(btn_fordfolkerson1, GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-        				.addComponent(btn_fordfolkerson2, GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-        				.addComponent(btn_WelchPowell, GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+        							.addComponent(jLabel8, GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+        							.addPreferredGap(ComponentPlacement.UNRELATED)
+        							.addComponent(jSlider1, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE)))
+        					.addContainerGap())
         				.addGroup(jPanel1Layout.createSequentialGroup()
-        					.addComponent(jLabel8, GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
-        					.addPreferredGap(ComponentPlacement.UNRELATED)
-        					.addComponent(jSlider1, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE)))
+        					.addComponent(btn_fordfolkerson2, GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+        					.addContainerGap())))
+        		.addGroup(Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(btn_fordfolkerson1, GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
         			.addContainerGap())
+        		.addGroup(Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        			.addContainerGap(69, Short.MAX_VALUE)
+        			.addComponent(jButton4, GroupLayout.PREFERRED_SIZE, 119, GroupLayout.PREFERRED_SIZE)
+        			.addGap(65))
+        		.addGroup(jPanel1Layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(btn_billmanford, GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+        			.addContainerGap())
+        		.addGroup(jPanel1Layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(btn_dijikstra, GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+        			.addContainerGap())
+        		.addGroup(jPanel1Layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(btn_kruskal, GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+        			.addContainerGap())
+        		.addGroup(jPanel1Layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(btn_prim, GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+        			.addContainerGap())
+        		.addGroup(Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(btn_wireshall, GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+        			.addContainerGap())
+        		.addGroup(Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(btn_dfs, GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+        			.addContainerGap())
+        		.addGroup(Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(btn_bfs, GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+        			.addContainerGap())
+        		.addGroup(Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        			.addContainerGap(32, Short.MAX_VALUE)
+        			.addComponent(lblNewLabel_2)
+        			.addGap(25))
+        		.addGroup(Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        			.addContainerGap(58, Short.MAX_VALUE)
+        			.addComponent(lblNewLabel_3, GroupLayout.PREFERRED_SIZE, 160, GroupLayout.PREFERRED_SIZE)
+        			.addGap(35))
+        		.addGroup(Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        			.addContainerGap(53, Short.MAX_VALUE)
+        			.addComponent(lblNewLabel_4)
+        			.addGap(32))
+        		.addGroup(Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        			.addContainerGap(58, Short.MAX_VALUE)
+        			.addComponent(lblNewLabel_5)
+        			.addGap(52))
         );
         jPanel1Layout.setVerticalGroup(
         	jPanel1Layout.createParallelGroup(Alignment.LEADING)
         		.addGroup(jPanel1Layout.createSequentialGroup()
-        			.addGap(86)
-        			.addComponent(btn_bfs)
+        			.addContainerGap()
+        			.addComponent(lblNewLabel)
         			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(lblNewLabel_1)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(btn_bfs)
+        			.addGap(7)
         			.addComponent(btn_dfs)
         			.addPreferredGap(ComponentPlacement.UNRELATED)
-        			.addComponent(btn_prim)
-        			.addPreferredGap(ComponentPlacement.UNRELATED)
-        			.addComponent(btn_kruskal)
-        			.addPreferredGap(ComponentPlacement.UNRELATED)
         			.addComponent(btn_wireshall)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(lblNewLabel_2)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(btn_prim)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(btn_kruskal)
+        			.addGap(10)
+        			.addComponent(lblNewLabel_3)
         			.addPreferredGap(ComponentPlacement.UNRELATED)
         			.addComponent(btn_dijikstra)
-        			.addPreferredGap(ComponentPlacement.UNRELATED)
+        			.addGap(7)
         			.addComponent(btn_billmanford)
         			.addPreferredGap(ComponentPlacement.UNRELATED)
-        			.addComponent(btn_fordfolkerson1)
-        			.addPreferredGap(ComponentPlacement.UNRELATED)
-        			.addComponent(btn_fordfolkerson2)
-        			.addPreferredGap(ComponentPlacement.UNRELATED)
-        			.addComponent(btn_WelchPowell)
-        			.addPreferredGap(ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-        			.addComponent(jButton4)
+        			.addComponent(lblNewLabel_4)
         			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(btn_fordfolkerson1)
+        			.addGap(11)
+        			.addComponent(btn_fordfolkerson2)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(lblNewLabel_5)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(btn_WelchPowell)
+        			.addPreferredGap(ComponentPlacement.UNRELATED)
+        			.addComponent(jButton4, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(lblNewLabel_6, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)
+        			.addGap(1)
         			.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING, false)
         				.addComponent(jSlider1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         				.addComponent(jLabel8, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -463,9 +562,9 @@ public class MainFrame extends javax.swing.JFrame {
         jSplitPane1.setLeftComponent(jSplitPane2);
 
         jSplitPane3.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
-        jSplitPane3.setResizeWeight(0.5);
+        jSplitPane3.setResizeWeight(0.7);
 
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder("Trace"));
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder("Trace de l'algorithme"));
 
         console.setEditable(false);
         console.setColumns(20);
@@ -845,4 +944,5 @@ public class MainFrame extends javax.swing.JFrame {
     public static javax.swing.JLabel label_e;
     public static javax.swing.JLabel label_v;
     private theoriegraphes.MenuInitial menuInitial1;
+    private JLabel lblNewLabel_6;
 }
