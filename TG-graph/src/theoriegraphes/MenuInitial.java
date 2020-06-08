@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.Font;
+import java.awt.Label;
 
 
 public class MenuInitial extends javax.swing.JPanel {
@@ -39,37 +40,37 @@ public class MenuInitial extends javax.swing.JPanel {
     private void initComponents() {
 
     	 jLayeredPane1 = new javax.swing.JLayeredPane();
-
          jLayeredPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
          
          JPanel panel = new JPanel();
+         
 
          javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
          jLayeredPane1Layout.setHorizontalGroup(
          	jLayeredPane1Layout.createParallelGroup(Alignment.LEADING)
-         		.addGroup(Alignment.TRAILING, jLayeredPane1Layout.createSequentialGroup()
-         			.addContainerGap(183, Short.MAX_VALUE)
-         			.addComponent(panel, GroupLayout.PREFERRED_SIZE, 371, GroupLayout.PREFERRED_SIZE)
-         			.addGap(167))
+         		.addGroup(jLayeredPane1Layout.createSequentialGroup()
+         			.addContainerGap()
+         			.addComponent(panel, GroupLayout.PREFERRED_SIZE, 519, GroupLayout.PREFERRED_SIZE)
+         			.addContainerGap(252, Short.MAX_VALUE))
          );
          jLayeredPane1Layout.setVerticalGroup(
          	jLayeredPane1Layout.createParallelGroup(Alignment.LEADING)
          		.addGroup(jLayeredPane1Layout.createSequentialGroup()
-         			.addGap(164)
-         			.addComponent(panel, GroupLayout.PREFERRED_SIZE, 147, GroupLayout.PREFERRED_SIZE)
-         			.addContainerGap(166, Short.MAX_VALUE))
+         			.addContainerGap()
+         			.addComponent(panel, GroupLayout.PREFERRED_SIZE, 296, GroupLayout.PREFERRED_SIZE)
+         			.addContainerGap(55, Short.MAX_VALUE))
          );
                          panel.setLayout(null);
                          jToggleButton2 = new javax.swing.JToggleButton();
-                         jToggleButton2.setBackground(new Color(248, 177, 149));
-                         jToggleButton2.setBounds(0, 25, 174, 25);
+                         jToggleButton2.setBackground(new Color(234, 141, 141));
+                         jToggleButton2.setBounds(250, 130, 132, 25);
                          panel.add(jToggleButton2);
                          
                                  jToggleButton2.setText("Orienté");
                                  jLayeredPane1.setLayer(jToggleButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
                                  jToggleButton1 = new javax.swing.JToggleButton();
-                                 jToggleButton1.setBackground(new Color(248, 177, 149));
-                                 jToggleButton1.setBounds(0, 63, 174, 25);
+                                 jToggleButton1.setBackground(new Color(234, 141, 141));
+                                 jToggleButton1.setBounds(250, 166, 132, 25);
                                  panel.add(jToggleButton1);
                                  
                                          jToggleButton1.setText("Pondéré");
@@ -77,19 +78,26 @@ public class MenuInitial extends javax.swing.JPanel {
                                          
                                                  jLayeredPane1.setLayer(jToggleButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
                                  jButton1 = new javax.swing.JButton();
-                                 jButton1.setBackground(new Color(53, 92, 125));
-                                 jButton1.setBounds(0, 103, 174, 25);
+                                 jButton1.setBackground(new Color(30, 174, 152));
+                                 jButton1.setBounds(222, 221, 193, 25);
                                  panel.add(jButton1);
                                  jButton1.setForeground(Color.WHITE);
                                  
                                          
-                                         jButton1.setText("Commencer");
+                                         jButton1.setText("Cr\u00E9er");
                                          jButton1.addActionListener(new java.awt.event.ActionListener() {
                                              public void actionPerformed(java.awt.event.ActionEvent evt) {
                                                  jButton1ActionPerformed(evt);
                                              }
                                          });
                                          jLayeredPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+                                         
+                                         Label label = new Label("Remarque : ceci est une case \u00E0 cocher, le graph est par defaut sans orientation.");
+                                         label.setFont(new Font("Lucida Fax", Font.ITALIC, 13));
+                                         label.setForeground(new Color(224, 108, 108));
+                                         label.setBounds(0, 73, 480, 22);
+                                         
+                                         panel.add(label);
                                          
                                          
          jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -116,8 +124,4 @@ public class MenuInitial extends javax.swing.JPanel {
          MainFrame.getInstance().setCentrePanel(new Canvas());
          Configuration.checkAlgos();
      }//GEN-LAST:event_jButton1ActionPerformed
-
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    
 }
