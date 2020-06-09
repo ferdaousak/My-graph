@@ -490,16 +490,20 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2.setColumnHeaderView(jPanel2);
         jLabel1 = new javax.swing.JLabel();
+        jLabel1.setFont(new Font("Constantia", Font.ITALIC, 14));
         jLabel2 = new javax.swing.JLabel();
+        jLabel2.setFont(new Font("Constantia", Font.ITALIC, 14));
         jLabel3 = new javax.swing.JLabel();
+        jLabel3.setFont(new Font("Constantia", Font.ITALIC, 14));
         btn_mode_emploi = new javax.swing.JButton();
+        btn_mode_emploi.setFont(new Font("Constantia", Font.BOLD, 14));
         label_v = new javax.swing.JLabel();
         label_e = new javax.swing.JLabel();
         label_d = new javax.swing.JLabel();
         
                 jLabel1.setText("Nombre de sommets (|V|):");
                 
-                        jLabel2.setText("Nombre d'arrets(|E|):");
+                        jLabel2.setText("Nombre d'ar\u00EAtes(|E|):");
                         
                                 jLabel3.setText("Densite (d):");
                                 
@@ -612,23 +616,33 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane3.setViewportView(panel);
         panel.setLayout(null);
         btn_matrice = new javax.swing.JButton();
-        btn_matrice.setBounds(27, 24, 147, 23);
+        btn_matrice.setBounds(40, 46, 147, 23);
         panel.add(btn_matrice);
         
                 btn_matrice.setText("Matrice d'Adjacence");
                 btn_matrice.setEnabled(false);
                 btn_enregistrer = new javax.swing.JButton();
-                btn_enregistrer.setBounds(10, 68, 94, 23);
+                btn_enregistrer.setBounds(114, 115, 94, 23);
                 panel.add(btn_enregistrer);
                 
                         btn_enregistrer.setText("Enregistrer");
                         btn_enregistrer.setEnabled(false);
                         btn_restore = new javax.swing.JButton();
-                        btn_restore.setBounds(105, 68, 94, 23);
+                        btn_restore.setBounds(10, 115, 94, 23);
                         panel.add(btn_restore);
                         
                                 btn_restore.setText("Restaurer");
                                 btn_restore.setEnabled(false);
+                                
+                                lblNewLabel_7 = new JLabel("La matrice");
+                                lblNewLabel_7.setFont(new Font("Constantia", Font.BOLD, 18));
+                                lblNewLabel_7.setBounds(62, 11, 105, 14);
+                                panel.add(lblNewLabel_7);
+                                
+                                lblNewLabel_8 = new JLabel("Sauvgader ou Restaurer l'etat de graphe");
+                                lblNewLabel_8.setFont(new Font("Constantia", Font.BOLD, 10));
+                                lblNewLabel_8.setBounds(10, 90, 198, 14);
+                                panel.add(lblNewLabel_8);
                                 btn_restore.addActionListener(new java.awt.event.ActionListener() {
                                     public void actionPerformed(java.awt.event.ActionEvent evt) {
                                         btn_restoreActionPerformed(evt);
@@ -945,4 +959,6 @@ public class MainFrame extends javax.swing.JFrame {
     public static javax.swing.JLabel label_v;
     private theoriegraphes.MenuInitial menuInitial1;
     private JLabel lblNewLabel_6;
+    private JLabel lblNewLabel_7;
+    private JLabel lblNewLabel_8;
 }
