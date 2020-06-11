@@ -816,7 +816,7 @@ public class MainFrame extends javax.swing.JFrame {
 
             		        WebView webView = new WebView();
 
-            		        URL url = this.getClass().getResource("/UserGuide/Guide.html");
+            		        URL url = this.getClass().getResource("/UserGuide/guide/userGuide.html");
             		        webView.getEngine().load(url.toString());
 
             		        VBox vBox = new VBox(webView);
