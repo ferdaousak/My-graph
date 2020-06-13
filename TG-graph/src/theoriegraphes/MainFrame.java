@@ -116,7 +116,6 @@ public class MainFrame extends javax.swing.JFrame {
         jSplitPane1 = new javax.swing.JSplitPane();
         jSplitPane1.setBackground(new Color(153, 255, 153));
         jSplitPane2 = new javax.swing.JSplitPane();
-        jSplitPane2.setResizeWeight(1.0);
         jSplitPane2.setBackground(new Color(153, 255, 153));
         jPanel1 = new javax.swing.JPanel();
         btn_bfs = new javax.swing.JButton();
@@ -149,7 +148,6 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         console = new javax.swing.JTextArea();
         console.setBackground(new Color(255, 255, 204));
-        btn_exporter_pdf = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -513,6 +511,15 @@ public class MainFrame extends javax.swing.JFrame {
                                                 btn_mode_emploiActionPerformed(evt);
                                             }
                                         });
+                                                btn_exporter_pdf = new javax.swing.JButton();
+                                                
+                                                        btn_exporter_pdf.setText("Exporter PDF");
+                                                        btn_exporter_pdf.setEnabled(false);
+                                                        btn_exporter_pdf.addActionListener(new java.awt.event.ActionListener() {
+                                                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                                                btn_exporter_pdfActionPerformed(evt);
+                                                            }
+                                                        });
                                         
                                                 javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
                                                 jPanel2Layout.setHorizontalGroup(
@@ -522,7 +529,7 @@ public class MainFrame extends javax.swing.JFrame {
                                                 			.addGroup(jPanel2Layout.createParallelGroup(Alignment.LEADING)
                                                 				.addGroup(jPanel2Layout.createSequentialGroup()
                                                 					.addComponent(jLabel3)
-                                                					.addPreferredGap(ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                                                					.addPreferredGap(ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                                                 					.addComponent(label_d, GroupLayout.PREFERRED_SIZE, 179, GroupLayout.PREFERRED_SIZE))
                                                 				.addGroup(jPanel2Layout.createParallelGroup(Alignment.LEADING, false)
                                                 					.addGroup(jPanel2Layout.createSequentialGroup()
@@ -533,40 +540,47 @@ public class MainFrame extends javax.swing.JFrame {
                                                 						.addComponent(jLabel2)
                                                 						.addPreferredGap(ComponentPlacement.UNRELATED)
                                                 						.addComponent(label_e, GroupLayout.PREFERRED_SIZE, 154, GroupLayout.PREFERRED_SIZE))))
-                                                			.addGap(838))
+                                                			.addGap(220)
+                                                			.addComponent(btn_exporter_pdf, GroupLayout.PREFERRED_SIZE, 188, GroupLayout.PREFERRED_SIZE)
+                                                			.addGap(430))
                                                 		.addGroup(jPanel2Layout.createSequentialGroup()
                                                 			.addGap(185)
                                                 			.addComponent(btn_mode_emploi, GroupLayout.PREFERRED_SIZE, 367, GroupLayout.PREFERRED_SIZE)
-                                                			.addContainerGap(563, Short.MAX_VALUE))
+                                                			.addContainerGap(587, Short.MAX_VALUE))
                                                 );
                                                 jPanel2Layout.setVerticalGroup(
                                                 	jPanel2Layout.createParallelGroup(Alignment.LEADING)
                                                 		.addGroup(jPanel2Layout.createSequentialGroup()
                                                 			.addContainerGap()
                                                 			.addComponent(btn_mode_emploi)
-                                                			.addPreferredGap(ComponentPlacement.RELATED)
                                                 			.addGroup(jPanel2Layout.createParallelGroup(Alignment.LEADING)
-                                                				.addComponent(jLabel1)
-                                                				.addComponent(label_v))
-                                                			.addGap(7)
-                                                			.addGroup(jPanel2Layout.createParallelGroup(Alignment.TRAILING)
-                                                				.addComponent(jLabel2)
-                                                				.addComponent(label_e, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE))
-                                                			.addPreferredGap(ComponentPlacement.RELATED)
-                                                			.addGroup(jPanel2Layout.createParallelGroup(Alignment.TRAILING)
-                                                				.addComponent(jLabel3)
-                                                				.addComponent(label_d))
+                                                				.addGroup(jPanel2Layout.createSequentialGroup()
+                                                					.addPreferredGap(ComponentPlacement.RELATED)
+                                                					.addGroup(jPanel2Layout.createParallelGroup(Alignment.LEADING)
+                                                						.addComponent(jLabel1)
+                                                						.addComponent(label_v))
+                                                					.addGap(7)
+                                                					.addGroup(jPanel2Layout.createParallelGroup(Alignment.TRAILING)
+                                                						.addComponent(jLabel2)
+                                                						.addComponent(label_e, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE))
+                                                					.addPreferredGap(ComponentPlacement.RELATED)
+                                                					.addGroup(jPanel2Layout.createParallelGroup(Alignment.TRAILING)
+                                                						.addComponent(jLabel3)
+                                                						.addComponent(label_d)))
+                                                				.addGroup(jPanel2Layout.createSequentialGroup()
+                                                					.addGap(21)
+                                                					.addComponent(btn_exporter_pdf)))
                                                 			.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                                 );
-                                                jPanel2Layout.linkSize(SwingConstants.VERTICAL, new Component[] {jLabel3, label_d});
                                                 jPanel2Layout.linkSize(SwingConstants.VERTICAL, new Component[] {jLabel1, label_v});
+                                                jPanel2Layout.linkSize(SwingConstants.VERTICAL, new Component[] {jLabel3, label_d});
                                                 jPanel2.setLayout(jPanel2Layout);
                                                 jPanel2.setBackground(new Color(204, 255, 204));
 
         jSplitPane1.setLeftComponent(jSplitPane2);
 
         jSplitPane3.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
-        jSplitPane3.setResizeWeight(0.7);
+        jSplitPane3.setResizeWeight(1.0);
 
         jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder("Trace de l'algorithme"));
 
@@ -575,35 +589,23 @@ public class MainFrame extends javax.swing.JFrame {
         console.setRows(5);
         jScrollPane1.setViewportView(console);
 
-        btn_exporter_pdf.setText("Exporter PDF");
-        btn_exporter_pdf.setEnabled(false);
-        btn_exporter_pdf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_exporter_pdfActionPerformed(evt);
-            }
-        });
-
         jPanel5.setBackground(new Color(204, 255, 204)); // trace panel color
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(btn_exporter_pdf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+        	jPanel5Layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(jPanel5Layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+        			.addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_exporter_pdf)
-                .addContainerGap())
+        	jPanel5Layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(jPanel5Layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 472, GroupLayout.PREFERRED_SIZE)
+        			.addContainerGap(37, Short.MAX_VALUE))
         );
+        jPanel5.setLayout(jPanel5Layout);
 
         jSplitPane3.setRightComponent(jPanel5);
 
@@ -616,19 +618,19 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane3.setViewportView(panel);
         panel.setLayout(null);
         btn_matrice = new javax.swing.JButton();
-        btn_matrice.setBounds(40, 46, 147, 23);
+        btn_matrice.setBounds(35, 29, 147, 23);
         panel.add(btn_matrice);
         
                 btn_matrice.setText("Matrice d'Adjacence");
                 btn_matrice.setEnabled(false);
                 btn_enregistrer = new javax.swing.JButton();
-                btn_enregistrer.setBounds(114, 115, 94, 23);
+                btn_enregistrer.setBounds(114, 88, 94, 23);
                 panel.add(btn_enregistrer);
                 
                         btn_enregistrer.setText("Enregistrer");
                         btn_enregistrer.setEnabled(false);
                         btn_restore = new javax.swing.JButton();
-                        btn_restore.setBounds(10, 115, 94, 23);
+                        btn_restore.setBounds(10, 88, 94, 23);
                         panel.add(btn_restore);
                         
                                 btn_restore.setText("Restaurer");
@@ -641,7 +643,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 
                                 lblNewLabel_8 = new JLabel("Sauvgader ou Restaurer l'etat de graphe");
                                 lblNewLabel_8.setFont(new Font("Constantia", Font.BOLD, 10));
-                                lblNewLabel_8.setBounds(10, 90, 198, 14);
+                                lblNewLabel_8.setBounds(10, 63, 198, 14);
                                 panel.add(lblNewLabel_8);
                                 btn_restore.addActionListener(new java.awt.event.ActionListener() {
                                     public void actionPerformed(java.awt.event.ActionEvent evt) {
